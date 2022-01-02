@@ -2,23 +2,22 @@ import React from 'react'
 import styled from 'styled-components';
 import teslas from "../images/model-3.jpg"
 import downarrow from "../images/down-arrow.svg"
-
-const Section = () => {
+const Section = ({title , discription , leftbtnText , rightbtnText , bgImage}) => {
     return (
-        <Wrap>
+        <Wrap bgimage = {bgImage}>
                        
   <ItemText>
-      <h1>Model S</h1>
-      <p>Order Online for TouchLess Delivery</p>
+      <h1>{title}</h1>
+      <p>{discription}</p>
   </ItemText>
   <Buttons>
   <ButtonGroup>
   <LeftButton>
-  Custom Order
+  {leftbtnText}
   </LeftButton>
   
   <RightButton>
-  Existing Inventory
+{rightbtnText}
   </RightButton>
   </ButtonGroup>
   
@@ -51,6 +50,9 @@ const ButtonGroup = styled.div`
     display: flex;
     margin-bottom: 30px;
     cursor: pointer;
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
 `
 
 const LeftButton = styled.div`
@@ -65,19 +67,25 @@ const LeftButton = styled.div`
      opacity: 0.85;
      text-transform: uppercase;
      font-size: 12px;
+     margin: 8px;
 `
 
 const RightButton = styled(LeftButton)`
-    
+    background-color: white;
+    opacity: 0.85;
+    color: black;
 `
 
 const  DownArrow = styled.img`
-display: block;
     margin-top: 20px;
     height: 40px;
+    animation: animateDown infinite 1.5s;
+    overflow-x: hidden;
    
 `
-const Buttons = styled.div``
+const Buttons = styled.div`
+text-align: center;
+`
 
 export default Section
 

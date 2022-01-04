@@ -3,12 +3,12 @@ import styled from 'styled-components'
 import TeslaLogo from "../images/logo.svg";
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import { Link } from 'react-router-dom';
+
 
 export const Header = () => {
 
   const [burgerStatus , setBurgerStatus] = useState(false);
-
-
 
     return (
         <Container>

@@ -1,26 +1,29 @@
 import React from 'react'
 import styled from 'styled-components';
-import teslas from "../images/model-3.jpg"
-import downarrow from "../images/down-arrow.svg"
+// import teslas from "../images/model-3.jpg"
+import downarrow from "../images/down-arrow.svg";
+import { Fade } from 'react-reveal';
 const Section = ({title , discription , leftbtnText , rightbtnText , bgImage}) => {
     return (
-        <Wrap bgimage = {bgImage}>
-                       
+        <Wrap bgImage = {bgImage}>
+     <Fade bottom>
   <ItemText>
       <h1>{title}</h1>
       <p>{discription}</p>
   </ItemText>
+  </Fade>
   <Buttons>
+      <Fade bottom>
   <ButtonGroup>
   <LeftButton>
   {leftbtnText}
   </LeftButton>
   
-  <RightButton>
+{ rightbtnText &&  <RightButton>
 {rightbtnText}
-  </RightButton>
+  </RightButton>}
   </ButtonGroup>
-  
+  </Fade>
   <DownArrow src={downarrow} alt="down"/>
   </Buttons>
           </Wrap>
@@ -30,7 +33,8 @@ const Section = ({title , discription , leftbtnText , rightbtnText , bgImage}) =
 const Wrap = styled.div`
 width: 100vw;
 height:100vh;
-background-image: url(${teslas}); 
+background-image: url(${props => props.bgImage}) ; 
+
 background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
@@ -88,4 +92,10 @@ text-align: center;
 `
 
 export default Section
+
+
+
+
+
+
 

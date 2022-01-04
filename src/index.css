@@ -21,3 +21,8 @@ overflow-x: hidden;
     transform: translateY(3px);
   }
 }
+
+a{
+  text-decoration: none;
+  color: black;
+}

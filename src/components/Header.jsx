@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import TeslaLogo from "../images/logo.svg";
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-import { Link } from 'react-router-dom';
+
 
 
 export const Header = () => {
@@ -26,7 +26,7 @@ export const Header = () => {
 
             <RightMenu>
                <a href="#">Shop</a>
-               <a href="">Tesla Account</a>
+               <a href="#">Tesla Account</a>
                <CustomMenu onClick={()=>setBurgerStatus(true)} / >
             </RightMenu>
 

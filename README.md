@@ -2,7 +2,7 @@
 
 ![Tesla Clone](https://pbs.twimg.com/media/FIXE_3DVcAAoo6_?format=jpg&name=large)
 
-This Project is builded with Tech Stack - React js , Styled Components , React Router , React Hooks .
+This Project is builded with Tech Stack - React js , Styled Components , React Router , React Hooks , Material UI Icons .
 
 ## Available Scripts
 
